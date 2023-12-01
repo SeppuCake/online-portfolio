@@ -1,0 +1,11 @@
+Model Information:
+* title:	hololive gamers - Kedama Korone
+* source:	https://sketchfab.com/3d-models/hololive-gamers-kedama-korone-1a43bd00027e44bda572bd86056cc42a
+* author:	KirbyDX (https://sketchfab.com/kirbydx)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "hololive gamers - Kedama Korone" (https://sketchfab.com/3d-models/hololive-gamers-kedama-korone-1a43bd00027e44bda572bd86056cc42a) by KirbyDX (https://sketchfab.com/kirbydx) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
