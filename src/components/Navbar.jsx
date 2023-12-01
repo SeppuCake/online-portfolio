@@ -14,10 +14,11 @@ const Navbar = () => {
       }>
         <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
           <Link
-            to="/"
+            to="/online-portfolio/"
+            smooth={true}
+            duration={500}
             className='flex items-center gap-2'
             onClick={() =>{
-              setActive("");
               window.scrollTo(0, 0);
             }}>
               <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
@@ -27,6 +28,8 @@ const Navbar = () => {
             {navLinks.map((Link) => (
               <li
                 key={Link.id}
+                smooth={true}
+                duration={500}
                 className={`${
                   active === Link.title
                     ? "text-white"
@@ -51,6 +54,8 @@ const Navbar = () => {
               {navLinks.map((Link) => (
                 <li
                   key={Link.id}
+                  smooth={true}
+                  duration={500}
                   className={`${
                     active === Link.title
                       ? "text-white"

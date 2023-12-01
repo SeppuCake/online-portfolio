@@ -28,6 +28,13 @@ import {
   python,
   mysql,
   jquery,
+  eproc_dashboard,
+  eproc_login,
+  aniso,
+  konbini,
+  personalproj,
+  calradiaRPG,
+  danmachiRPG,
 } from "../assets";
 
 export const navLinks = [
@@ -168,7 +175,7 @@ const projects = [
   {
     name: "e-Procurement",
     description:
-      "Web-based platform with a responsive website and a dashboard for statistics displays such as number of orders, number of procurements, and generate reports.",
+      "A responsive website and a dashboard for statistics displays such as number of orders, number of procurements, and generate reports. This web application implemented a Create, Read, Update, Delete (CRUD) to cater the order, product and user creation to its database simultaneously display the items on view pages to process based on their user access control (UAC) privileges.",
     tags: [
       {
         name: "HTML",
@@ -199,7 +206,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: carrent,
+    image: eproc_dashboard,
     source_code_link: "https://github.com/",
   },
   {
@@ -212,7 +219,7 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: jobit,
+    image: aniso,
     source_code_link: "https://github.com/",
   },
   {
@@ -241,16 +248,16 @@ const projects = [
         color: "orange-text-gradient",
       },
     ],
-    image: tripguide,
+    image: konbini,
     source_code_link: "https://github.com/",
   },
   {
-    name: "Personal Projects",
+    name: "Ocelot (Final Year Project)",
     description:
-      "My personal projects compiled over the course of my journey in improving and learning new programming languages",
+      "Our project, Ocelot, addresses the challenges faced by cybersecurity teams during fieldwork. Penetration tests (pen-tests) involve gathering information about a target system or company. We're developing a handheld device, using Linux, Near-Field Communication (NFC), and Android. The device, based on the Nexus 4, aids white hat hackers with security features and penetration testing tools.",
     tags: [
       {
-        name: "Java",
+        name: "JavaScript",
         color: "orange-text-gradient",
       },
       {
@@ -259,11 +266,11 @@ const projects = [
       },
       {
         name: "Python",
-        color: "orange-text-gradient",
+        color: "blue-text-gradient",
       },
       {
         name: "CSS",
-        color: "orange-text-gradient",
+        color: "green-text-gradient",
       },
       {
         name: "MySQL",
@@ -274,7 +281,49 @@ const projects = [
         color: "blue-text-gradient",
       },
     ],
-    image: jobit,
+    image: personalproj,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Calradia RPG",
+    description:
+      "Calradia RPG was one of my favourite project of mine that taught me the challenging aspects of Object-Oriented Programming (OOP) in Java. Despite only having basics of Java OOP knowledge, this is my attempt in building my own text-based Role-playing Game (RPG) written in Java by using JOptionPane library and JFrame to create an interactive game with basic Graphical User Interface.",
+    tags: [
+      {
+        name: "Java",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: calradiaRPG,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Danmachi RPG",
+    description:
+      "Danmachi Role-playing Game (RPG) was one of my first projects that piqued my interest in website development in HTML and PHP. Despite only having basics of HTML, CSS, SQL and PHP knowledge, this is my attempt in building my own text-based RPG to create an interactive game with simple website design to assist me in understanding the concept of web programming. With the challenge of front-end and back-end needed to be developed, I employed the basic planning procedures of sketching and design for the database in SQL and trial and error in figuring out the CSS styling for the pages.",
+    tags: [
+      {
+        name: "HTML",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "JavaScript",
+        color: "orange-text-gradient",
+      },
+      {
+        name: "Python",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "MySQL",
+        color: "orange-text-gradient",
+      }
+    ],
+    image: danmachiRPG,
     source_code_link: "https://github.com/",
   },
 ];

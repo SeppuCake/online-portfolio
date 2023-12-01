@@ -44,7 +44,7 @@ const About = () => {
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px] justify-center'
       >
         I graduated from German-Malaysian Institute with Diploma in Network Security where I learned through Cisco Networking Academy and the basics of programming languages such as Python, HTML, PHP, Java, and SQL. While learning cybersecurity and achieved Cisco Certified Networking Associate (CCNA), I self taught in learning more in developing simple web development and challenge myself in learning new things. I have always been intrigued with technology especially computers. I started tinkering with computers at a very young age. My hobbies outside of coding are playing video games, creating content through video editing, and cooking. With interest in video games and creating content, I try incorporate my interests in self-teaching myself with learning programming languages such as familiarizing with Unity and Java.
       </motion.p>
