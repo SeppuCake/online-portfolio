@@ -18,6 +18,7 @@ import {
   meta,
   starbucks,
   compurex,
+  cfm,
   tesla,
   shopify,
   carrent,
@@ -116,6 +117,19 @@ const technologies = [
 
 const experiences = [
   {
+    title: "Full-Stack Junior Programmer",
+    company_name: "Computer Forms Malaysia Berhad",
+    icon: cfm,
+    iconBg: "#000000",
+    date: "May 2025 - Current",
+    points: [
+      "Designed, developed, and maintained internal web tools and automation systems (email blasts, SMS broadcasting, data purging, requisition workflows) end-to-end as a solo developer",
+      "Built reliable, scalable backend systems using PHP and MySQL",
+      "Debugged complex logic and data issues to improve system stability and performance",
+      "Collaborated closely with stakeholders across the full software lifecycle — requirements to deployment",
+    ],
+  },
+  {
     title: "Full-Stack Junior Web Developer",
     company_name: "CompuRex Corporation Sdn. Bhd.",
     icon: compurex,
@@ -126,7 +140,7 @@ const experiences = [
       "Built a responsive HTML, PHP, Laravel, JavaScript, jQuery based cross-browser compatibility",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
-      "Developed and worked with a team in building a scalable web application that connected other services provided by the company"
+      "Developed and worked with a team in building a scalable web application that connected other services provided by the company",
     ],
   },
   {
@@ -321,7 +335,7 @@ const projects = [
       {
         name: "MySQL",
         color: "orange-text-gradient",
-      }
+      },
     ],
     image: danmachiRPG,
     source_code_link: "https://github.com/",
