@@ -1,5 +1,5 @@
 import { Tilt } from "react-tilt";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
@@ -7,14 +7,21 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+const ProjectCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+}) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
           max: 45,
           scale: 1,
-          speed: 450
+          speed: 450,
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
@@ -24,7 +31,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
-          
+
           {/* <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
@@ -41,7 +48,9 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] justify-content">{description}</p>
+          <p className="mt-2 text-secondary text-[14px] justify-content">
+            {description}
+          </p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -53,8 +62,8 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
         </div>
       </Tilt>
     </motion.div>
-  )
-}
+  );
+};
 
 const Works = () => {
   return (
@@ -66,24 +75,25 @@ const Works = () => {
 
       <div className="w-full flex">
         <motion.p
-          variants={fadeIn("","", 0.1, 1)}
+          variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Most of these projects were written in Java, Python, HTML, PHP, SQL. My endeavour in these projects were entirely as a hobby and interest in game and web development. I have also explored in the cybersecurity industry to gain further knowledge as an addition to my university courses during my diploma in Network Security.
+          Most of these projects were written in Java, Python, HTML, PHP, SQL.
+          My endeavour in these projects were inclusive of interests in game and
+          web development, work projects and learning process. I have also
+          explored in the cybersecurity industry to gain further knowledge as an
+          addition to my university courses during my diploma in Network
+          Security.
         </motion.p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={`project-${index}`}
-            index={index}
-            {...project}
-          />
+          <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
     </>
-  )
-}
+  );
+};
 
 export default SectionWrapper(Works, "");
