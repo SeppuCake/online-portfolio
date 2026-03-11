@@ -130,6 +130,19 @@ const experiences = [
     ],
   },
   {
+    title: "Freelance Web Developer",
+    company_name: "",
+    icon: web,
+    iconBg: "#E6DEDD",
+    date: "Jul 2019 - May 2025",
+    points: [
+      "Developing and maintaining web applications based on clients' requirements.",
+      "Collaborated with local students in achieving their project goals and provide support as an advisor.",
+      "Provide private tutoring for students in developing their fundamentals in programming.",
+      "Assisted and review projects assigned by clients for testing and debugging.",
+    ],
+  },
+  {
     title: "Full-Stack Junior Web Developer",
     company_name: "CompuRex Corporation Sdn. Bhd.",
     icon: compurex,
@@ -141,19 +154,6 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
       "Developed and worked with a team in building a scalable web application that connected other services provided by the company",
-    ],
-  },
-  {
-    title: "Freelance Web Developer",
-    company_name: "",
-    icon: web,
-    iconBg: "#E6DEDD",
-    date: "Jul 2019 - Current",
-    points: [
-      "Developing and maintaining web applications based on clients' requirements.",
-      "Collaborated with local students in achieving their project goals and provide support as an advisor.",
-      "Provide private tutoring for students in developing their fundamentals in programming.",
-      "Assisted and review projects assigned by clients for testing and debugging.",
     ],
   },
 ];
