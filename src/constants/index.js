@@ -20,6 +20,10 @@ import {
   cfm,
   eproc_dashboard,
   eproc_login,
+  cfm_ctm,
+  cfm_ctm_dashboard,
+  cfm_ctm_sr,
+  cfm_ctm_srform,
   aniso,
   konbini,
   personalproj,
@@ -170,6 +174,21 @@ const testimonials = [
 ];
 
 const projects = [
+  {
+    name: "Central Task Monitor",
+    description:
+      "A responsive web application and dashboard for task & service requisition management, featuring statistics on tasks, report generation, and full CRUD functionality with user access control (UAC) privileges.",
+    tags: [
+      { name: "PHP", color: "pink-text-gradient" },
+      { name: "MySQL", color: "green-text-gradient" },
+      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "jQuery", color: "blue-text-gradient" },
+      { name: "AJAX", color: "pink-text-gradient" },
+      { name: "HTML", color: "blue-text-gradient" },
+    ],
+    image: cfm_ctm,
+    source_code_link: "https://github.com/SeppuCake",
+  },
   {
     name: "e-Procurement System",
     description:

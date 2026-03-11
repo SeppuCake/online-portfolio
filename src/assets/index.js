@@ -53,6 +53,13 @@ import personalproj from "./ocelot/projectlogo.png";
 import calradiaRPG from "./calradiaRPG/IntroImage.png";
 import danmachiRPG from "./danmachiRPG/d_homepage.png";
 
+import cfm_ctm from "./centraltaskmonitor/dashboard-live.png";
+import cfm_ctm_dashboard from "./centraltaskmonitor/dashboard.png";
+import cfm_ctm_sr from "./centraltaskmonitor/servicerequests.png";
+import cfm_ctm_srform from "./centraltaskmonitor/newservicerequest.png";
+import cfm_ctm_uac from "./centraltaskmonitor/userlisting.png";
+import cfm_ctm_tasks from "./centraltaskmonitor/tasks.png";
+
 export {
   logo,
   backend,
@@ -105,4 +112,10 @@ export {
   personalproj,
   danmachiRPG,
   calradiaRPG,
+  cfm_ctm,
+  cfm_ctm_dashboard,
+  cfm_ctm_sr,
+  cfm_ctm_srform,
+  cfm_ctm_uac,
+  cfm_ctm_tasks,
 };
