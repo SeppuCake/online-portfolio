@@ -4,31 +4,20 @@ import {
   creator,
   web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
-  redux,
   tailwind,
   nodejs,
-  mongodb,
   git,
   figma,
-  docker,
-  meta,
-  starbucks,
-  compurex,
-  cfm,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
   php,
   python,
   mysql,
   jquery,
+  threejs,
+  compurex,
+  cfm,
   eproc_dashboard,
   eproc_login,
   aniso,
@@ -63,12 +52,12 @@ const services = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "UI/UX Designer",
     icon: creator,
   },
   {
     title: "Freelance Tech Advisor",
-    icon: creator,
+    icon: mobile,
   },
 ];
 
@@ -94,10 +83,6 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Bootstrap",
-    icon: html,
-  },
-  {
     name: "Tailwind CSS",
     icon: tailwind,
   },
@@ -106,54 +91,69 @@ const technologies = [
     icon: nodejs,
   },
   {
+    name: "PHP",
+    icon: php,
+  },
+  {
+    name: "Python",
+    icon: python,
+  },
+  {
     name: "MySQL",
     icon: mysql,
   },
   {
-    name: "git",
+    name: "Three JS",
+    icon: threejs,
+  },
+  {
+    name: "Git",
     icon: git,
+  },
+  {
+    name: "Figma",
+    icon: figma,
   },
 ];
 
 const experiences = [
   {
     title: "Full-Stack Junior Programmer",
-    company_name: "Computer Forms Malaysia Berhad",
+    company_name: "Computer Forms Malaysia Berhad (CFM)",
     icon: cfm,
     iconBg: "#000000",
-    date: "May 2025 - Current",
+    date: "May 2025 - Present",
     points: [
-      "Designed, developed, and maintained internal web tools and automation systems (email blasts, SMS broadcasting, data purging, requisition workflows) end-to-end as a solo developer",
-      "Built reliable, scalable backend systems using PHP and MySQL",
-      "Debugged complex logic and data issues to improve system stability and performance",
-      "Collaborated closely with stakeholders across the full software lifecycle — requirements to deployment",
+      "Designed, developed, and maintained internal web tools and automation systems (email blasts, SMS broadcasting, data purging, requisition workflows) end-to-end as a solo developer.",
+      "Built reliable, scalable backend systems using PHP and MySQL.",
+      "Debugged complex logic and data issues to improve system stability and performance.",
+      "Collaborated closely with stakeholders across the full software lifecycle — from requirements gathering to deployment and maintenance.",
     ],
   },
   {
-    title: "Freelance Web Developer",
-    company_name: "",
+    title: "Freelance Web Developer & Tech Tutor",
+    company_name: "Self-Employed",
     icon: web,
     iconBg: "#E6DEDD",
     date: "Jul 2019 - May 2025",
     points: [
-      "Developing and maintaining web applications based on clients' requirements.",
-      "Collaborated with local students in achieving their project goals and provide support as an advisor.",
-      "Provide private tutoring for students in developing their fundamentals in programming.",
-      "Assisted and review projects assigned by clients for testing and debugging.",
+      "Developed and maintained web applications based on clients' requirements.",
+      "Collaborated with local students to achieve their project goals and provided support as a technical advisor.",
+      "Provided private tutoring for students in developing their programming fundamentals.",
+      "Assisted and reviewed client projects for testing, debugging, and code quality.",
     ],
   },
   {
-    title: "Full-Stack Junior Web Developer",
+    title: "Junior Web Developer (Internship)",
     company_name: "CompuRex Corporation Sdn. Bhd.",
     icon: compurex,
     iconBg: "#000000",
     date: "Jul 2018 - Jan 2019",
     points: [
-      "Design and deploy SQL Database (MySQL, SQLLite)",
-      "Built a responsive HTML, PHP, Laravel, JavaScript, jQuery based cross-browser compatibility",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-      "Developed and worked with a team in building a scalable web application that connected other services provided by the company",
+      "Designed and deployed SQL databases (MySQL, SQLite).",
+      "Built responsive HTML, PHP, Laravel, JavaScript, and jQuery based web applications with cross-browser compatibility.",
+      "Implemented cybersecurity policies including OWASP Top 10, RBAC, and input validation and sanitisation.",
+      "Collaborated with teams to build a scalable SaaS web application and educated colleagues on secure coding practices.",
     ],
   },
 ];
@@ -161,184 +161,88 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+      "Hakeem's ability to independently manage the full development lifecycle is impressive. He delivered reliable systems with minimal supervision.",
+    name: "Colleague / Stakeholder",
+    designation: "",
+    company: "CFM Tech Forms Sdn. Bhd.",
+    image: "https://randomuser.me/api/portraits/men/1.jpg",
   },
 ];
 
 const projects = [
   {
-    name: "e-Procurement",
+    name: "e-Procurement System",
     description:
-      "A responsive website and a dashboard for statistics displays such as number of orders, number of procurements, and generate reports. This web application implemented a Create, Read, Update, Delete (CRUD) to cater the order, product and user creation to its database simultaneously display the items on view pages to process based on their user access control (UAC) privileges.",
+      "A responsive web application and dashboard for procurement management, featuring statistics on orders and procurements, report generation, and full CRUD functionality with user access control (UAC) privileges.",
     tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "MySQL",
-        color: "green-text-gradient",
-      },
-      {
-        name: "PHP",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "jQuery",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "AJAX",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Laravel",
-        color: "orange-text-gradient",
-      },
+      { name: "PHP", color: "pink-text-gradient" },
+      { name: "Laravel", color: "orange-text-gradient" },
+      { name: "MySQL", color: "green-text-gradient" },
+      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "jQuery", color: "blue-text-gradient" },
+      { name: "AJAX", color: "pink-text-gradient" },
+      { name: "HTML", color: "blue-text-gradient" },
     ],
     image: eproc_dashboard,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/SeppuCake",
   },
   {
     name: "Anisotropic Diffusion Software",
     description:
-      "A Java program to proof a concept in Anisotropic Diffusion using Perona-Malik, Conductance Estimation Methods and BLACK et al equations to process images through calculation.",
-    tags: [
-      {
-        name: "Java",
-        color: "orange-text-gradient",
-      },
-    ],
+      "A Java application that demonstrates Anisotropic Diffusion image processing using Perona-Malik, Conductance Estimation Methods, and BLACK et al. equations.",
+    tags: [{ name: "Java", color: "orange-text-gradient" }],
     image: aniso,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/SeppuCake",
   },
   {
     name: "Konbini Inventory",
     description:
-      "Konbini Inventory aim to enhance and introduce an efficient, robust, and reliable performance in maintaining inventory in the retail industry. Inventory management has always been the key for retail industry to keep track of their stocks and sales performance for a product with the use of Near-Field Communications (NFC) technology.",
+      "An inventory management system for the retail industry using Near-Field Communications (NFC) technology to track stock and sales performance efficiently.",
     tags: [
-      {
-        name: "HTML",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "MySQL",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Arduino",
-        color: "orange-text-gradient",
-      },
+      { name: "HTML", color: "blue-text-gradient" },
+      { name: "CSS", color: "pink-text-gradient" },
+      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "MySQL", color: "green-text-gradient" },
+      { name: "Arduino", color: "orange-text-gradient" },
     ],
     image: konbini,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/SeppuCake",
   },
   {
-    name: "Ocelot (Final Year Project)",
+    name: "Ocelot — Final Year Project",
     description:
-      "Our project, Ocelot, addresses the challenges faced by cybersecurity teams during fieldwork. Penetration tests (pen-tests) involve gathering information about a target system or company. We're developing a handheld device, using Linux, Near-Field Communication (NFC), and Android. The device, based on the Nexus 4, aids white hat hackers with security features and penetration testing tools.",
+      "A cybersecurity handheld device project built on Android (Nexus 4) using Linux and NFC technology, designed to assist penetration testers with security features and pen-testing tools in the field.",
     tags: [
-      {
-        name: "JavaScript",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MySQL",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Kali-Linux",
-        color: "blue-text-gradient",
-      },
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "Kali Linux", color: "blue-text-gradient" },
+      { name: "JavaScript", color: "orange-text-gradient" },
+      { name: "HTML", color: "orange-text-gradient" },
+      { name: "MySQL", color: "green-text-gradient" },
     ],
     image: personalproj,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/SeppuCake",
   },
   {
     name: "Calradia RPG",
     description:
-      "Calradia RPG was one of my favourite project of mine that taught me the challenging aspects of Object-Oriented Programming (OOP) in Java. Despite only having basics of Java OOP knowledge, this is my attempt in building my own text-based Role-playing Game (RPG) written in Java by using JOptionPane library and JFrame to create an interactive game with basic Graphical User Interface.",
-    tags: [
-      {
-        name: "Java",
-        color: "orange-text-gradient",
-      },
-    ],
+      "A text-based RPG written in Java using JOptionPane and JFrame, built to deepen understanding of Object-Oriented Programming (OOP) concepts through an interactive game with a basic GUI.",
+    tags: [{ name: "Java", color: "orange-text-gradient" }],
     image: calradiaRPG,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/SeppuCake",
   },
   {
     name: "Danmachi RPG",
     description:
-      "Danmachi Role-playing Game (RPG) was one of my first projects that piqued my interest in website development in HTML and PHP. Despite only having basics of HTML, CSS, SQL and PHP knowledge, this is my attempt in building my own text-based RPG to create an interactive game with simple website design to assist me in understanding the concept of web programming. With the challenge of front-end and back-end needed to be developed, I employed the basic planning procedures of sketching and design for the database in SQL and trial and error in figuring out the CSS styling for the pages.",
+      "A text-based web RPG built with HTML, CSS, PHP, and MySQL — one of the first projects that sparked a passion for web development, combining front-end design with back-end database integration.",
     tags: [
-      {
-        name: "HTML",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "JavaScript",
-        color: "orange-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "CSS",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MySQL",
-        color: "orange-text-gradient",
-      },
+      { name: "HTML", color: "orange-text-gradient" },
+      { name: "CSS", color: "green-text-gradient" },
+      { name: "PHP", color: "pink-text-gradient" },
+      { name: "MySQL", color: "green-text-gradient" },
+      { name: "JavaScript", color: "blue-text-gradient" },
     ],
     image: danmachiRPG,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/SeppuCake",
   },
 ];
 

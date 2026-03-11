@@ -31,4 +31,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          user_name: "Hakeem"
+          user_name: "SeppuCake"
+          user_email: "mohdameerulhakeem@gmail.com"
