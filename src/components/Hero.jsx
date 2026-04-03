@@ -13,21 +13,27 @@ const Hero = () => {
         </div>
         <div>
           <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, I'm <span className='text-[#ff9100]'>Hakeem</span></h1>
+            Hi, I'm <span className='text-[#ff9100]'>Hakeem</span>
+          </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            An aspiring web developer who strive <br className="sm:block hidden" /> to expand his knowledge and<br className="sm:block hidden" /> sharpen his skills in <br className="sm:block hidden" />software development industry.</p>
+            An aspiring web developer who strive <br className="sm:block hidden" /> 
+            to expand his knowledge and<br className="sm:block hidden" /> 
+            sharpen his skills in <br className="sm:block hidden" />
+            software development industry.
+          </p>
         </div>
       </div>
 
-      <KoroneCanvas />
+      {/* ✅ Constrain Korone to right side, specific height, doesn't overlap text */}
+      <div className="absolute bottom-0 right-0 w-full sm:w-[55%] md:w-[50%] lg:w-[45%] h-[60vh] sm:h-[70vh]">
+        <KoroneCanvas />
+      </div>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
         <a href="#about">
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
-            <motion.dev
-              animate={{
-                y: [0, 24, 0]
-              }}
+            <motion.div  {/* ✅ fixed typo: motion.dev → motion.div */}
+              animate={{ y: [0, 24, 0] }}
               transition={{
                 duration: 1.5,
                 repeat: Infinity,
@@ -38,9 +44,8 @@ const Hero = () => {
           </div>
         </a>
       </div>
-
     </section>
   );
 };
 
-export default Hero
+export default Hero;
