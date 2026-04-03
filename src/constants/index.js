@@ -30,6 +30,14 @@ import {
   calradiaRPG,
   danmachiRPG,
   apt_mgmt_homepage,
+  apt_homepage,
+  apt_bill_mgmt,
+  apt_complaint_mgmt,
+  apt_payment_mgmt,
+  apt_overall_report,
+  apt_sms_wa_msg_module,
+  apt_report_gen_module,
+  apt_users,
 } from "../assets";
 
 export const navLinks = [
@@ -276,7 +284,15 @@ const projects = [
       },
     ],
     image: apt_mgmt_homepage,
-    gallery: [],
+    gallery: [
+      apt_bill_mgmt,
+      apt_complaint_mgmt,
+      apt_payment_mgmt,
+      apt_overall_report,
+      apt_sms_wa_msg_module,
+      apt_report_gen_module,
+      apt_users,
+    ],
     source_code_link: "https://github.com/SeppuCake",
   },
   {
