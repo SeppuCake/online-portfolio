@@ -84,7 +84,7 @@ const Korones = ({ isMobile }) => {
   // Dynamic scale: fills viewport without skewing
   // The GLTF root already has a 1.8475 scale matrix baked in
   // so we keep our scale modest
-  const scale = isMobile ? 0.55 : 0.72;
+  const scale = isMobile ? 0.85 : 1.25;
 
   // Center it vertically — adjust yOffset to taste
   const yOffset = isMobile ? -0.8 : -2.2;
