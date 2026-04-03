@@ -52,19 +52,32 @@ import konbini from "./konbini/illustratedimage.jfif";
 import personalproj from "./ocelot/projectlogo.png";
 import calradiaRPG from "./calradiaRPG/IntroImage.png";
 import danmachiRPG from "./danmachiRPG/d_homepage.png";
-
+//CTM Imports
 import cfm_ctm from "./centraltaskmonitor/dashboard-live.png";
 import cfm_ctm_dashboard from "./centraltaskmonitor/dashboard.png";
 import cfm_ctm_sr from "./centraltaskmonitor/servicerequests.png";
 import cfm_ctm_srform from "./centraltaskmonitor/newservicerequest.png";
 import cfm_ctm_uac from "./centraltaskmonitor/userlisting.png";
 import cfm_ctm_tasks from "./centraltaskmonitor/tasks.png";
-
-import apt_mgmt from "./aptmgmt/menu.png";
-import apt_mgmt_homepage from "./aptmgmt/homepage.png";
-import apt_mgmt_reslist from "./aptmgmt/reslist.png";
-import apt_mgmt_resform from "./aptmgmt/resform.png";
-import apt_mgmt_uac from "./aptmgmt/uac.png";
+//TMS Imports
+import apt_homepage from "./aptmgmt/homepage.png";
+import apt_bill_mgmt from "./aptmgmt/bill-mgmt.png";
+import apt_bill_types from "./aptmgmt/bill-types.png";
+import apt_complaint_mgmt from "./aptmgmt/complaint-mgmt.png";
+import apt_gen_batch_bill from "./aptmgmt/gen-batch-bill.png";
+import apt_menu from "./aptmgmt/menu.png";
+import apt_mobile_bill_mgmt from "./aptmgmt/mobile-bill-mgmt.png";
+import apt_mobile_menu from "./aptmgmt/mobile-menu.png";
+import apt_new_bill_manual from "./aptmgmt/new-bill-manual.png";
+import apt_overall_report from "./aptmgmt/overall-report.png";
+import apt_payment_history from "./aptmgmt/payment-history.png";
+import apt_payment_mgmt from "./aptmgmt/payment-mgmt.png";
+import apt_payment_mgmt_modal from "./aptmgmt/payment-mgmt-modal.png";
+import apt_report_gen_module from "./aptmgmt/report-gen-module.png";
+import apt_report_gen_pdf_maker from "./aptmgmt/report-gen-pdf-maker.png";
+import apt_sms_wa_msg_module from "./aptmgmt/sms-wa-msg-module.png";
+import apt_sms_wa_msg_module_modal from "./aptmgmt/sms-wa-msg-module-modal.png";
+import apt_users from "./aptmgmt/users.png";
 
 export {
   logo,
@@ -124,9 +137,22 @@ export {
   cfm_ctm_srform,
   cfm_ctm_uac,
   cfm_ctm_tasks,
-  apt_mgmt,
-  apt_mgmt_homepage,
-  apt_mgmt_resform,
-  apt_mgmt_reslist,
-  apt_mgmt_uac,
+  apt_homepage,
+  apt_bill_mgmt,
+  apt_bill_types,
+  apt_complaint_mgmt,
+  apt_gen_batch_bill,
+  apt_menu,
+  apt_mobile_bill_mgmt,
+  apt_mobile_menu,
+  apt_new_bill_manual,
+  apt_overall_report,
+  apt_payment_history,
+  apt_payment_mgmt,
+  apt_payment_mgmt_modal,
+  apt_report_gen_module,
+  apt_report_gen_pdf_maker,
+  apt_sms_wa_msg_module,
+  apt_sms_wa_msg_module_modal,
+  apt_users,
 };
