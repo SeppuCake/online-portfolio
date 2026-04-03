@@ -29,6 +29,7 @@ import {
   personalproj,
   calradiaRPG,
   danmachiRPG,
+  apt_mgmt_homepage,
 } from "../assets";
 
 export const navLinks = [
@@ -202,7 +203,7 @@ const projects = [
       { name: "AJAX", color: "pink-text-gradient" },
       { name: "HTML", color: "blue-text-gradient" },
     ],
-    image: cfm_ctm,
+    image: apt_mgmt,
     source_code_link: "https://github.com/SeppuCake",
   },
   {

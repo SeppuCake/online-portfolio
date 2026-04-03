@@ -60,6 +60,12 @@ import cfm_ctm_srform from "./centraltaskmonitor/newservicerequest.png";
 import cfm_ctm_uac from "./centraltaskmonitor/userlisting.png";
 import cfm_ctm_tasks from "./centraltaskmonitor/tasks.png";
 
+import apt_mgmt from "./aptmgmt/menu.png";
+import apt_mgmt_homepage from "./aptmgmt/homepage.png";
+import apt_mgmt_reslist from "./aptmgmt/reslist.png";
+import apt_mgmt_resform from "./aptmgmt/resform.png";
+import apt_mgmt_uac from "./aptmgmt/uac.png";
+
 export {
   logo,
   backend,
@@ -118,4 +124,9 @@ export {
   cfm_ctm_srform,
   cfm_ctm_uac,
   cfm_ctm_tasks,
+  apt_mgmt,
+  apt_mgmt_homepage,
+  apt_mgmt_resform,
+  apt_mgmt_reslist,
+  apt_mgmt_uac,
 };
