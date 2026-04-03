@@ -84,10 +84,10 @@ const Korones = ({ isMobile }) => {
   // Dynamic scale: fills viewport without skewing
   // The GLTF root already has a 1.8475 scale matrix baked in
   // so we keep our scale modest
-  const scale = isMobile ? 0.55 : 0.38;
+  const scale = isMobile ? 0.55 : 0.72;
 
   // Center it vertically — adjust yOffset to taste
-  const yOffset = isMobile ? -0.8 : -1.2;
+  const yOffset = isMobile ? -0.8 : -2.2;
 
   return (
     // ✅ ref on group so animations bind correctly to skeleton
@@ -135,8 +135,8 @@ const KoroneCanvas = () => {
       shadows={false} // unlit models don't cast real shadows
       dpr={[1, 2]} // responsive pixel ratio — crisp on retina, not heavy on low-end
       camera={{
-        position: [0, 1.5, 5],
-        fov: 40, // narrower FOV = less distortion, more "portrait" feel
+        position: [0, 0.5, 5], // 👈 lower camera Y from 1.5 → 0.5, looks up slightly at her
+        fov: 38,
         near: 0.1,
         far: 100,
       }}
@@ -159,7 +159,7 @@ const KoroneCanvas = () => {
           autoRotateSpeed={1.2} // slow, elegant rotation
           maxPolarAngle={Math.PI / 1.8} // can look slightly above
           minPolarAngle={Math.PI / 3} // can't look from too far below
-          target={[0, 0.5, 0]} // orbit around upper body, not feet
+          target={[0, 1.2, 0]} // orbit around upper body, not feet
         />
         <Korones isMobile={isMobile} />
       </Suspense>
