@@ -7,115 +7,137 @@ Source: https://sketchfab.com/3d-models/inugami-korone-hololive-8b89fc7bb19c449b
 Title: Inugami Korone (hololive)
 */
 
-import React, { useRef } from 'react'
-import { Suspense, useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Preload, useGLTF, useAnimations } from '@react-three/drei';
+import React, { useRef, useEffect, useState } from "react";
+import { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import {
+  OrbitControls,
+  Preload,
+  useGLTF,
+  useAnimations,
+} from "@react-three/drei";
+import * as THREE from "three";
 
-import CanvasLoader from '../Loader';
+import CanvasLoader from "../Loader";
 
 const Korones = ({ isMobile }) => {
-  const korone = useGLTF('./kedamaKorone/kedameKorone.gltf')
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./kedamaKorone/kedameKorone.gltf')
-  const { actions, names } = useAnimations(animations, group)
+  const group = useRef();
+
+  // ✅ Use the correct model path
+  const { scene, animations } = useGLTF("./inugami_korone_hololive/scene.gltf");
+  const { actions, names } = useAnimations(animations, group);
+
+  useEffect(() => {
+    // ✅ Fix inside-out / interior rendering issue
+    scene.traverse((child) => {
+      if (child.isMesh) {
+        child.material.side = THREE.DoubleSide; // renders both faces
+        child.material.depthWrite = true;
+        child.material.needsUpdate = true;
+        child.castShadow = true;
+        child.receiveShadow = true;
+      }
+    });
+  }, [scene]);
+
+  useEffect(() => {
+    // ✅ Play first available animation if any exist
+    if (names.length > 0) {
+      actions[names[0]]?.reset().fadeIn(0.5).play();
+    }
+
+    return () => {
+      // Cleanup animation on unmount
+      if (names.length > 0) {
+        actions[names[0]]?.fadeOut(0.5);
+      }
+    };
+  }, [actions, names]);
 
   return (
-    <mesh>
-      <hemisphereLight intensity={0.50} groundColor="black" />
-      <pointLight intensity={20} position={[0, 1, 3]}/>
-      <spotLight
-        position={[0.5, 2, 0.5]}
-        angle={0}
-        penumbra={1}
-        intensity={100}
+    // ✅ Attach ref to group so animations work correctly
+    <group ref={group}>
+      {/* Soft ambient base */}
+      <ambientLight intensity={0.6} />
+
+      {/* Main warm key light from front-top */}
+      <directionalLight
+        position={[2, 5, 3]}
+        intensity={1.5}
         castShadow
-        shadow-mapSize={1024}
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
+        color="#fff5e0"
       />
-        <primitive
-        object={korone.scene}
+
+      {/* Pink fill light — gives anime character warmth */}
+      <pointLight position={[-3, 2, 2]} intensity={1.2} color="#ffb7c5" />
+
+      {/* Cool blue rim light from behind — adds depth */}
+      <pointLight position={[3, 1, -3]} intensity={0.8} color="#a8d8ff" />
+
+      {/* Subtle ground bounce light */}
+      <hemisphereLight
+        skyColor="#ffffff"
+        groundColor="#ffccdd"
+        intensity={0.4}
+      />
+
+      <primitive
+        object={scene}
         scale={isMobile ? 0.5 : 2.5}
-        position={isMobile ? [0, -12, 0] : [0, -2.5, 0]}
-        rotation={[0, 0, 0]}
+        position={isMobile ? [0, -3, 0] : [0, -2.5, 0]}
+        rotation={[0, 0.2, 0]} // slight angle looks more natural
       />
-    </mesh>
-  )
-}
+    </group>
+  );
+};
 
 const KoroneCanvas = () => {
-
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Add a listener for changes to screen size here
-    const mediaQuery = window.matchMedia('(max-width: 300px)');
-
-    // Set init value of 'isMobile' state var
+    const mediaQuery = window.matchMedia("(max-width: 500px)"); // ✅ 300px was too narrow
     setIsMobile(mediaQuery.matches);
 
-    // Define a callback function to handle changes to media query
     const handleMediaQueryChange = (event) => {
       setIsMobile(event.matches);
-    }
+    };
 
-    // Add the callback function to a listener for changes to media query
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
-
-    // Remove the listener when the component is unmounted
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
-    }
-  }, [])
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+    };
+  }, []);
 
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always" // ✅ "demand" stops animations from playing smoothly
       shadows
-      camera={{ position: [0, 3, 5], fov: 50 }}
-      gl={{ preserveDrawingBuffer: true }}
+      camera={{ position: [0, 2, 5], fov: 45 }} // ✅ slightly closer, lower fov = less distortion
+      gl={{
+        preserveDrawingBuffer: true,
+        antialias: true, // ✅ smoother edges
+        alpha: true, // ✅ transparent background
+      }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-        enableZoom={false}
-        autoRotate
-        autoRotateSpeed={25}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
+          enableZoom={false}
+          autoRotate
+          autoRotateSpeed={1.5} // ✅ 25 was way too fast — slow and elegant
+          maxPolarAngle={Math.PI / 2}
+          minPolarAngle={Math.PI / 4} // ✅ prevents looking from directly below
+          enablePan={false} // ✅ prevent accidental panning
         />
         <Korones isMobile={isMobile} />
       </Suspense>
 
       <Preload all />
     </Canvas>
-  )
-}
+  );
+};
 
-/* const Korone = (props) => {
-  const group = useRef()
-  const { nodes, materials, animations } = useGLTF('/scene.gltf')
-  const { actions, names } = useAnimations(animations, group)
+export default KoroneCanvas;
 
-  useEffect(() => {
-    actions[names[0]].reset().fadeIn(0.5).play();
-  }, [])
-
-  return (
-    <group ref={group} {...props} dispose={null}>
-      <group name="Sketchfab_Scene">
-        <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={1.848}>
-          <group name="Root">
-            <group name="Armature">
-              <primitive object={nodes.Armature_rootJoint} />
-              <group name="korobody" position={[0, 0, 0.083]} scale={0.394} />
-              <skinnedMesh name="korobody_0" geometry={nodes.korobody_0.geometry} material={materials.yubi_mat} skeleton={nodes.korobody_0.skeleton} />
-            </group>
-          </group>
-        </group>
-      </group>
-    </group>
-  )
-} */
-
-export default KoroneCanvas
-
-//useGLTF.preload('/scene.gltf');
+useGLTF.preload("./inugami_korone_hololive/scene.gltf");

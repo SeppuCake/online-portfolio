@@ -190,6 +190,22 @@ const projects = [
     source_code_link: "https://github.com/SeppuCake",
   },
   {
+    name: "Apartment Management System",
+    description:
+      "A responsive web application and dashboard for low-cost apartment management, featuring statistics on units, tenant information, and full CRUD functionality with user access control (UAC) privileges.",
+    tags: [
+      { name: "PHP", color: "pink-text-gradient" },
+      { name: "Laravel", color: "orange-text-gradient" },
+      { name: "MySQL", color: "green-text-gradient" },
+      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "jQuery", color: "blue-text-gradient" },
+      { name: "AJAX", color: "pink-text-gradient" },
+      { name: "HTML", color: "blue-text-gradient" },
+    ],
+    image: cfm_ctm,
+    source_code_link: "https://github.com/SeppuCake",
+  },
+  {
     name: "e-Procurement System",
     description:
       "A responsive web application and dashboard for procurement management, featuring statistics on orders and procurements, report generation, and full CRUD functionality with user access control (UAC) privileges.",
