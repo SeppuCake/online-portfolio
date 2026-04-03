@@ -29,7 +29,6 @@ import {
   personalproj,
   calradiaRPG,
   danmachiRPG,
-  apt_mgmt_homepage,
   apt_homepage,
   apt_bill_mgmt,
   apt_complaint_mgmt,
@@ -283,7 +282,7 @@ const projects = [
         desc: "View and update status of assigned maintenance jobs",
       },
     ],
-    image: apt_mgmt_homepage,
+    image: apt_homepage,
     gallery: [
       apt_bill_mgmt,
       apt_complaint_mgmt,
