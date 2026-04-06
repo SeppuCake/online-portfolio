@@ -29,7 +29,7 @@ const Home = () => (
 );
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/online-portfolio">
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/project/:slug" element={<ProjectDetail />} />
