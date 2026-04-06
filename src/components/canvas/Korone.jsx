@@ -87,7 +87,7 @@ const Korones = ({ isMobile }) => {
   const scale = isMobile ? 0.5 : 1.0;
 
   // Center it vertically — adjust yOffset to taste
-  const yOffset = isMobile ? -0.8 : -3.2;
+  const yOffset = isMobile ? -1.5 : -3.2;
 
   return (
     // ✅ ref on group so animations bind correctly to skeleton
