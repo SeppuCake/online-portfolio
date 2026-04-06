@@ -84,10 +84,10 @@ const Korones = ({ isMobile }) => {
   // Dynamic scale: fills viewport without skewing
   // The GLTF root already has a 1.8475 scale matrix baked in
   // so we keep our scale modest
-  const scale = isMobile ? 0.5 : 0.72;
+  const scale = isMobile ? 0.5 : 1.0;
 
   // Center it vertically — adjust yOffset to taste
-  const yOffset = isMobile ? -0.8 : -0.2;
+  const yOffset = isMobile ? -0.8 : -3.2;
 
   return (
     // ✅ ref on group so animations bind correctly to skeleton
