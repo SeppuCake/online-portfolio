@@ -15,11 +15,13 @@ const ProjectCard = ({ index, name, description, tags, image, slug }) => {
   };
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.1, 0.75)}
+      className="w-full xs:w-[360px]"
+    >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full
-                   cursor-pointer group"
+        className="bg-tertiary p-5 rounded-2xl w-full cursor-pointer group"
         onClick={handleClick}
       >
         {/* Image */}
@@ -27,16 +29,11 @@ const ProjectCard = ({ index, name, description, tags, image, slug }) => {
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover rounded-2xl
-                       group-hover:scale-105 transition-transform duration-500"
+            className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
           />
 
           {/* Hover overlay */}
-          <div
-            className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100
-                          transition-opacity duration-300 rounded-2xl
-                          flex items-center justify-center"
-          >
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300-2xl flex items-center justify-center">
             <span
               className="text-white font-semibold text-[14px] tracking-wide
                              border border-white/40 px-4 py-2 rounded-full
@@ -105,7 +102,7 @@ const Works = () => (
       </motion.p>
     </div>
 
-    <div className="mt-20 flex flex-wrap gap-7">
+    <div className="mt-20 flex flex-wrap justify-center gap-7">
       {projects.map((project, index) => (
         <ProjectCard key={`project-${index}`} index={index} {...project} />
       ))}
