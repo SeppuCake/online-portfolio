@@ -20,7 +20,13 @@ const ProjectCard = ({ index, name, description, tags, image, slug }) => {
       className="w-full xs:w-[360px]"
     >
       <Tilt
-        options={{ max: 45, scale: 1, speed: 450 }}
+        options={{
+          max: 15,
+          scale: 1,
+          speed: 450,
+          glare: false,
+          "max-glare": 0,
+        }}
         className="bg-tertiary p-5 rounded-2xl w-full cursor-pointer group"
         onClick={handleClick}
       >
@@ -29,6 +35,8 @@ const ProjectCard = ({ index, name, description, tags, image, slug }) => {
           <img
             src={image}
             alt={name}
+            loading="lazy"
+            decoding="async"
             className="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500"
           />
 
