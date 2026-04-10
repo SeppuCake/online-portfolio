@@ -17,6 +17,7 @@ const ProjectCard = ({ index, name, description, tags, image, slug }) => {
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.1, 0.75)}
+      onClick={handleClick}
       className="w-full xs:w-[360px]"
     >
       <Tilt
@@ -28,7 +29,6 @@ const ProjectCard = ({ index, name, description, tags, image, slug }) => {
           "max-glare": 0,
         }}
         className="bg-tertiary p-5 rounded-2xl w-full cursor-pointer group"
-        onClick={handleClick}
       >
         {/* Image */}
         <div className="relative w-full h-[230px] overflow-hidden rounded-2xl">
