@@ -216,7 +216,6 @@ const projects = [
       { label: "Framework", value: "Laravel (PHP)" },
       { label: "Frontend", value: "Blade Templates, Bootstrap, jQuery" },
       { label: "Database", value: "MySQL" },
-      { label: "SMS API", value: "iSMS Malaysia" },
       { label: "WhatsApp", value: "Custom REST API (self-built)" },
       { label: "Reports", value: "PDF Generation" },
       { label: "Access Control", value: "RBAC (4 user roles)" },
