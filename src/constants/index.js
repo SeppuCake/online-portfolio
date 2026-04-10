@@ -79,7 +79,7 @@ const experiences = [
       "Designed, developed, and maintained internal web tools and automation systems (email blasts, SMS broadcasting, data purging, requisition workflows) end-to-end as a solo developer.",
       "Built reliable, scalable backend systems using PHP and MySQL.",
       "Debugged complex logic and data issues to improve system stability and performance.",
-      "Collaborated closely with stakeholders across the full software lifecycle — from requirements gathering to deployment and maintenance.",
+      "Collaborated closely with stakeholders across the full software lifecycle - from requirements gathering to deployment and maintenance.",
     ],
   },
   {
@@ -128,7 +128,7 @@ const projects = [
     description:
       "A responsive web application and dashboard for task & service requisition management, featuring statistics on tasks, report generation, and full CRUD functionality with user access control (UAC) privileges.",
     longDescription:
-      "The Central Task Monitor (CTM) is an internal web-based management information system (MIS) developed solely for Computer Forms Malaysia Berhad (CFM). Built as a solo project during my tenure as a Junior Programmer, CTM was designed to replace fragmented manual workflows by centralising service request tracking, task assignment, and departmental reporting into a single secure platform. The system supports multi-stage service request workflows — from submission through to resolution — with real-time status updates and role-specific dashboards for each department. Every feature was built with production reliability in mind, from the AJAX-powered live updates to the structured UAC system that controls what each role can see and do.",
+      "The Central Task Monitor (CTM) is an internal web-based management information system (MIS) developed solely for Computer Forms Malaysia Berhad (CFM). Built as a solo project during my tenure as a Junior Programmer, CTM was designed to replace fragmented manual workflows by centralising service request tracking, task assignment, and departmental reporting into a single secure platform. The system supports multi-stage service request workflows - from submission through to resolution - with real-time status updates and role-specific dashboards for each department. Every feature was built with production reliability in mind, from the AJAX-powered live updates to the structured UAC system that controls what each role can see and do.",
     status: "Deployed (Internal)",
     duration: "Ongoing (2025 – Present)",
     team: "Solo Developer",
@@ -199,8 +199,8 @@ const projects = [
     description:
       "A responsive web application and dashboard for low-cost apartment management, featuring statistics on units, tenant information, and full CRUD functionality with user access control (UAC) privileges.",
     longDescription:
-      "Julia Apartment Management System (JMS) — also known as the Tenant Management System (TMS) — is a client-commissioned full-stack web application developed solo over 3–4 months using Laravel and Blade. The system was built to replace fragmented manual processes in a low-cost apartment complex with a unified, role-based platform that serves four distinct user types: Super Admins, Managers, Tenants, and Maintenance Crew. Key capabilities include tenant onboarding and profile management, bill generation and payment tracking, maintenance and complaint request workflows, and an analytics dashboard with PDF report exports. A standout feature is the dual messaging integration — automated SMS reminders via iSMS (a Malaysian provider) and a custom-built REST API that connects directly to the client's WhatsApp Business dashboard, syncing credit balances locally to enable WhatsApp notification broadcasts to tenants.",
-    status: "Completed — Not Deployed (v1.0)",
+      "Julia Apartment Management System (JMS) - also known as the Tenant Management System (TMS) - is a client-commissioned full-stack web application developed solo over 3-4 months using Laravel and Blade. The system was built to replace fragmented manual processes in a low-cost apartment complex with a unified, role-based platform that serves four distinct user types: Super Admins, Managers, Tenants, and Maintenance Crew. Key capabilities include tenant onboarding and profile management, bill generation and payment tracking, maintenance and complaint request workflows, and an analytics dashboard with PDF report exports. A standout feature is the dual messaging integration - automated SMS reminders via a Malaysian provider and a custom-built REST API that connects directly to the client's WhatsApp Business dashboard, syncing credit balances locally to enable WhatsApp notification broadcasts to tenants.",
+    status: "Completed - Not Deployed (v1.0)",
     duration: "3-4 months",
     team: "Solo Developer (Client-Commissioned)",
     tags: [
@@ -239,8 +239,8 @@ const projects = [
         desc: "Broadcast notices to all tenants or specific units directly from the dashboard.",
       },
       {
-        title: "SMS Reminders via iSMS",
-        desc: "Automated payment reminders and notice alerts sent via iSMS Malaysian provider.",
+        title: "SMS Reminders",
+        desc: "Automated payment reminders and notice alerts sent via SMS Malaysian provider.",
       },
       {
         title: "WhatsApp Business Integration",
@@ -402,12 +402,12 @@ const projects = [
     source_code_link: "https://github.com/SeppuCake",
   },
   {
-    name: "Ocelot — Final Year Project",
+    name: "Ocelot - Final Year Project",
     slug: "ocelot-final-year-project",
     description:
       "A cybersecurity handheld device project built on Android (Nexus 4) using Linux and NFC technology, designed to assist penetration testers with security features and pen-testing tools in the field.",
     longDescription:
-      "Ocelot is a final year diploma project — a cybersecurity handheld device built on a Nexus 4 running Kali Linux. More details coming soon.",
+      "Ocelot is a final year diploma project - a cybersecurity handheld device built on a Nexus 4 running Kali Linux. More details coming soon.",
     status: "Completed (Academic)",
     duration: "6 month(s)",
     team: "Team Project (University Final Year Project)",
@@ -445,7 +445,7 @@ const projects = [
     description:
       "A text-based RPG written in Java using JOptionPane and JFrame, built to deepen understanding of OOP concepts through an interactive game with a basic GUI.",
     longDescription:
-      "Calradia RPG is a personal Java project — a text-based role-playing game built to explore OOP concepts. More details coming soon.",
+      "Calradia RPG is a personal Java project - a text-based role-playing game built to explore OOP concepts. More details coming soon.",
     status: "Completed",
     duration: "2 week(s)",
     team: "Duo Developer (University Project)",
@@ -458,7 +458,7 @@ const projects = [
       },
       {
         title: "OOP Architecture",
-        desc: "Built using Java OOP principles — classes, inheritance, encapsulation.",
+        desc: "Built using Java OOP principles - classes, inheritance, encapsulation.",
       },
     ],
     roles: [],
@@ -470,7 +470,7 @@ const projects = [
     name: "Danmachi RPG",
     slug: "danmachi-rpg",
     description:
-      "A text-based web RPG built with HTML, CSS, PHP, and MySQL — one of the first projects that sparked a passion for web development.",
+      "A text-based web RPG built with HTML, CSS, PHP, and MySQL - one of the first projects that sparked a passion for web development.",
     longDescription:
       "Danmachi RPG is one of the first web projects that ignited a passion for web development. More details coming soon.",
     status: "Completed",
