@@ -368,6 +368,45 @@ const ProjectDetail = () => {
           </div>
         )}
 
+        {/* ── References ── */}
+        {project.references && project.references.length > 0 && (
+          <div className="mb-20">
+            <motion.div
+              variants={fadeUp(0)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+            >
+              <p className="text-[11px] font-semibold tracking-widest text-[#ff9100] uppercase mb-2">
+                Academic References
+              </p>
+              <h2 className="text-white font-bold text-[28px] mb-8">
+                Research basis
+              </h2>
+            </motion.div>
+            <div className="flex flex-col gap-3">
+              {project.references.map((ref, i) => (
+                <motion.div
+                  key={i}
+                  variants={fadeUp(i * 0.08)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true }}
+                  className="flex gap-4 bg-white/[0.03] border border-white/[0.08]
+                     rounded-xl p-4"
+                >
+                  <span className="text-[#ff9100] font-bold text-[13px] flex-shrink-0">
+                    [{i + 1}]
+                  </span>
+                  <p className="text-[#aaa6c3] text-[13px] leading-relaxed">
+                    {ref}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* ── Coming soon placeholder for projects without detail ── */}
         {(!features || features.length === 0) &&
           (!roles || roles.length === 0) && (

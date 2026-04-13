@@ -35,17 +35,6 @@ import cfm from "./company/cfm.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import eproc_dashboard from "./eProcurement/dashboard.png";
-import eproc_login from "./eProcurement/loginpage.png";
-import eproc_orderlist from "./eProcurement/orderlist.png";
-import eproc_uac from "./eProcurement/uac.png";
-import eproc_report from "./eProcurement/reportgen1.png";
-import eproc_crud from "./eProcurement/crud1.png";
-import eproc_erd from "./eProcurement/erd.png";
-import eproc_newuser from "./eProcurement/newuser.png";
-import eproc_newprod from "./eProcurement/newproduct.png";
-import eproc_proddet from "./eProcurement/productdetail.png";
-import eproc_msgmod from "./eProcurement/messagingmodule.png";
 import aniso from "./anisotropic/anisotropicjavahomepage.png";
 import aniso_eqPM1 from "./anisotropic/equationPM1.jpg";
 import konbini from "./konbini/illustratedimage.jfif";
@@ -78,6 +67,30 @@ import apt_report_gen_pdf_maker from "./aptmgmt/report-gen-pdf-maker.png";
 import apt_sms_wa_msg_module from "./aptmgmt/sms-wa-msg-module.png";
 import apt_sms_wa_msg_module_modal from "./aptmgmt/sms-wa-msg-module-modal.png";
 import apt_users from "./aptmgmt/users.png";
+//eProcurement Imports
+import eproc_dashboard from "./eProcurement/dashboard.png";
+import eproc_login from "./eProcurement/loginpage.png";
+import eproc_orderlist from "./eProcurement/orderlist.png";
+import eproc_uac from "./eProcurement/uac.png";
+import eproc_report from "./eProcurement/reportgen1.png";
+import eproc_crud from "./eProcurement/crud1.png";
+import eproc_erd from "./eProcurement/erd.png";
+import eproc_newuser from "./eProcurement/newuser.png";
+import eproc_newprod from "./eProcurement/newproduct.png";
+import eproc_proddet from "./eProcurement/productdetail.png";
+import eproc_msgmod from "./eProcurement/messagingmodule.png";
+//Anisotropic Diffusion Imports
+import aniso_1 from "./anisotropic/anisotropic1.png";
+import aniso_2 from "./anisotropic/anisotropic2 matriz.png";
+import aniso_3 from "./anisotropic/anisotropic3 matriz.png";
+import aniso_results from "./anisotropic/anistropicdiffusionresults.png";
+import aniso_blacketal from "./anisotropic/blacketal.png";
+import aniso_conductance from "./anisotropic/conductance1.png";
+import aniso_pm1 from "./anisotropic/peronamalik1.png";
+import aniso_pm2 from "./anisotropic/peronamalik2.png";
+import aniso_eqPM2 from "./anisotropic/equationPM2.jpg";
+import aniso_eqPM3 from "./anisotropic/equationPM3.jpg";
+import aniso_eqPM4 from "./anisotropic/equationPM4.jpg";
 
 export {
   logo,
@@ -155,4 +168,15 @@ export {
   apt_sms_wa_msg_module,
   apt_sms_wa_msg_module_modal,
   apt_users,
+  aniso_1,
+  aniso_2,
+  aniso_3,
+  aniso_results,
+  aniso_blacketal,
+  aniso_conductance,
+  aniso_pm1,
+  aniso_pm2,
+  aniso_eqPM2,
+  aniso_eqPM3,
+  aniso_eqPM4,
 };

@@ -31,7 +31,6 @@ import {
   cfm_ctm_dashboard,
   cfm_ctm_sr,
   cfm_ctm_srform,
-  aniso,
   konbini,
   personalproj,
   calradiaRPG,
@@ -44,6 +43,19 @@ import {
   apt_sms_wa_msg_module,
   apt_report_gen_module,
   apt_users,
+  aniso,
+  aniso_eqPM1,
+  aniso_1,
+  aniso_2,
+  aniso_3,
+  aniso_results,
+  aniso_blacketal,
+  aniso_conductance,
+  aniso_pm1,
+  aniso_pm2,
+  aniso_eqPM2,
+  aniso_eqPM3,
+  aniso_eqPM4,
 } from "../assets";
 
 export const navLinks = [
@@ -306,8 +318,8 @@ const projects = [
     description:
       "A full-stack procurement management web application built during internship, featuring a multi-stage approval workflow from order submission through HOD approval to supplier fulfilment, with a real-time dashboard, report generation, and role-based access control.",
     longDescription:
-      "The e-Procurement System was built solo during my internship at Compurex Corporation Sdn Bhd as a commissioned internal product. Before this system existed, procurement was handled entirely through emails, phone calls, and paper forms — a fragmented process that made it nearly impossible for PICs working remotely or on client sites to review and approve staff requests in a timely manner. The system replaced this entirely with a structured, multi-stage digital workflow: staff submit procurement requests, HODs review and approve them, approved requests are listed for registered suppliers to view, and suppliers accept and fulfil the procurement — all tracked in one place. Built over 3-4 months as a self-taught intern with no AI assistance and no senior guidance, every feature was researched independently using Stack Overflow, official documentation, and developer forums. This project marks the turning point where my skills crossed from basic programming into full-stack web development. Notably, the entire MVC architecture was designed and built from scratch — not using Laravel's scaffolding, but inspired by its conventions — including a custom-written role-based access control system, input validation, and sanitisation layer, all implemented without third-party security libraries. Every architectural decision was researched, reasoned, and built independently.",
-    status: "Completed — Handed Over (v1.0)",
+      "The e-Procurement System was built solo during my internship at Compurex Corporation Sdn Bhd as a commissioned internal product. Before this system existed, procurement was handled entirely through emails, phone calls, and paper forms - a fragmented process that made it nearly impossible for PICs working remotely or on client sites to review and approve staff requests in a timely manner. The system replaced this entirely with a structured, multi-stage digital workflow: staff submit procurement requests, HODs review and approve them, approved requests are listed for registered suppliers to view, and suppliers accept and fulfil the procurement - all tracked in one place. Built over 3-4 months as a self-taught intern with no AI assistance and no senior guidance, every feature was researched independently using Stack Overflow, official documentation, and developer forums. This project marks the turning point where my skills crossed from basic programming into full-stack web development. Notably, the entire MVC architecture was designed and built from scratch - not using Laravel's scaffolding, but inspired by its conventions - including a custom-written role-based access control system, input validation, and sanitisation layer, all implemented without third-party security libraries. Every architectural decision was researched, reasoned, and built independently.",
+    status: "Completed - Handed Over (v1.0)",
     duration: "3-4 months",
     team: "Solo Developer (Internship)",
     tags: [
@@ -344,7 +356,7 @@ const projects = [
     features: [
       {
         title: "Multi-Stage Procurement Workflow",
-        desc: "Full order lifecycle — staff submission → HOD approval → supplier procurement listing → supplier acceptance → fulfilment. Every stage is tracked with status updates.",
+        desc: "Full order lifecycle - staff submission → HOD approval → supplier procurement listing → supplier acceptance → fulfilment. Every stage is tracked with status updates.",
       },
       {
         title: "Remote-Accessible Approval",
@@ -372,15 +384,15 @@ const projects = [
       },
       {
         title: "Role-Based Access Control",
-        desc: "Four distinct user roles — Admin, Manager, Staff, and Supplier — each with tightly scoped permissions controlling what they can view and action.",
+        desc: "Four distinct user roles - Admin, Manager, Staff, and Supplier - each with tightly scoped permissions controlling what they can view and action.",
       },
       {
         title: "Self-Built Security Layer",
-        desc: "Rather than relying on framework-provided security tools, the entire access control system, input validation, and sanitisation layer was written from scratch — applying OWASP Top 10 principles with full understanding of each implementation decision.",
+        desc: "Rather than relying on framework-provided security tools, the entire access control system, input validation, and sanitisation layer was written from scratch - applying OWASP Top 10 principles with full understanding of each implementation decision.",
       },
       {
         title: "Responsive UI",
-        desc: "Fully responsive interface ensuring usability across desktop and mobile devices — critical for remote PICs accessing the system from client sites.",
+        desc: "Fully responsive interface ensuring usability across desktop and mobile devices - critical for remote PICs accessing the system from client sites.",
       },
     ],
     roles: [
@@ -418,27 +430,71 @@ const projects = [
     name: "Anisotropic Diffusion Software",
     slug: "anisotropic-diffusion-software",
     description:
-      "A Java application that demonstrates Anisotropic Diffusion image processing using Perona-Malik, Conductance Estimation Methods, and BLACK et al. equations.",
+      "A Java desktop application built as a proof-of-concept for anisotropic diffusion in image processing, implementing the Perona-Malik model, Black et al. robust estimation, and conductance-based diffusion to denoise and enhance images while preserving edges.",
     longDescription:
-      "A Java desktop application built to demonstrate and prove the concept of Anisotropic Diffusion in image processing. More details coming soon.",
-    status: "Completed",
+      "This project was developed as a freelance commission for a degree student's final year project at a local Malaysian university, serving as a proof-of-concept implementation of anisotropic diffusion - a non-linear image processing technique that selectively smooths noise within regions while preserving structural edges. The application was built entirely in Java and allows users to load any image and apply three distinct diffusion models: the classic Perona-Malik formulation (1990), the robust estimation approach by Black et al. (1998), and a conductance-based method. Each model computes pixel-level diffusion iteratively using partial differential equations (PDEs), producing progressively denoised output while keeping edge boundaries sharp. The project required translating complex mathematical equations from academic literature directly into working Java code - a challenging exercise in applied mathematics, algorithm implementation, and software design.",
+    status: "Completed (Academic Freelance)",
     duration: "1 month",
-    team: "Solo Developer (Client-Commissioned)",
+    team: "Solo Developer (Freelance-Commissioned)",
     tags: [{ name: "Java", color: "orange-text-gradient" }],
-    techStack: [{ label: "Language", value: "Java" }],
+    techStack: [
+      { label: "Language", value: "Java (SE)" },
+      { label: "UI Framework", value: "Java Swing (JFrame, JPanel)" },
+      { label: "Image I/O", value: "javax.imageio / BufferedImage" },
+      { label: "Algorithm Type", value: "PDE-based non-linear diffusion" },
+      {
+        label: "Math Models",
+        value: "Perona-Malik, Black et al., Conductance",
+      },
+      { label: "Platform", value: "Desktop (cross-platform JAR)" },
+    ],
     features: [
       {
-        title: "Perona-Malik Diffusion",
-        desc: "Implements the classic anisotropic diffusion equation.",
+        title: "Perona-Malik Diffusion Model",
+        desc: "Implements the landmark 1990 Perona-Malik anisotropic diffusion equation - the foundational PDE-based image smoothing model that selectively diffuses within flat regions while inhibiting diffusion across edges, controlled by a conductance function g(x).",
       },
       {
-        title: "Multiple Conductance Methods",
-        desc: "Supports multiple conductance estimation approaches.",
+        title: "Black et al. Robust Estimation Model",
+        desc: "Implements the 1998 Black, Sapiro, Marimont & Heeger robust anisotropic diffusion, which reframes diffusion as a robust statistical estimation problem and introduces Tukey's biweight edge-stopping function for sharper boundary preservation.",
+      },
+      {
+        title: "Conductance-Based Diffusion",
+        desc: "Implements conductance estimation methods that automatically regulate the rate and direction of diffusion based on local image gradient statistics, improving convergence and edge fidelity.",
+      },
+      {
+        title: "Image Load & Export",
+        desc: "Users can load any local image file into the application, apply the selected diffusion model with configurable iterations, and view or export the processed result.",
+      },
+      {
+        title: "Iterative PDE Processing",
+        desc: "Each diffusion model runs iteratively - computing gradient magnitudes and updating pixel intensities per-step - allowing users to observe the progressive denoising effect across multiple iterations.",
+      },
+      {
+        title: "Academic Algorithm Fidelity",
+        desc: "All mathematical equations were implemented directly from peer-reviewed literature, translating PDE notation into working Java code without the use of image processing libraries - demonstrating applied mathematical programming skills.",
       },
     ],
     roles: [],
+    references: [
+      "Perona, P. & Malik, J. (1990). Scale-space and edge detection using anisotropic diffusion. IEEE Transactions on Pattern Analysis and Machine Intelligence, 12(7), 629-639. https://doi.org/10.1109/34.56205",
+      "Black, M.J., Sapiro, G., Marimont, D. & Heeger, D. (1998). Robust anisotropic diffusion. IEEE Transactions on Image Processing, 7(3), 421-432. https://doi.org/10.1109/83.661192",
+      "Gerig, G., Kubler, O., Kikinis, R. & Jolesz, F.A. (1992). Nonlinear anisotropic filtering of MRI data. IEEE Transactions on Medical Imaging, 11(2), 221-232.",
+    ],
     image: aniso,
-    gallery: [],
+    gallery: [
+      aniso_pm1,
+      aniso_pm2,
+      aniso_eqPM1,
+      aniso_eqPM2,
+      aniso_eqPM3,
+      aniso_eqPM4,
+      aniso_blacketal,
+      aniso_conductance,
+      aniso_results,
+      aniso_1,
+      aniso_2,
+      aniso_3,
+    ],
     source_code_link: "https://github.com/SeppuCake",
   },
   {
