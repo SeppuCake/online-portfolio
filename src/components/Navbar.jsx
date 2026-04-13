@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import { styles } from "../styles";
@@ -11,24 +11,25 @@ const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // ── Handle anchor scrolling ───────────────────────────────────────────────
-  // If we're already on home, just scroll to the section
-  // If we're on a project detail page, navigate home first then scroll
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   const handleNavClick = (id, title) => {
     setActive(title);
     setToggle(false);
 
-    if (location.pathname !== "/") {
-      // Navigate home, then scroll after page loads
+    // ✅ Check using React Router's pathname which is always relative to basename
+    // So on home it's "/" not "/online-portfolio/"
+    const isHome = location.pathname === "/";
+
+    if (!isHome) {
       navigate("/");
-      setTimeout(() => {
-        const el = document.getElementById(id);
-        if (el) el.scrollIntoView({ behavior: "smooth" });
-      }, 300);
+      // Wait for Home to mount before scrolling
+      setTimeout(() => scrollToSection(id), 500);
     } else {
-      // Already on home, just scroll
-      const el = document.getElementById(id);
-      if (el) el.scrollIntoView({ behavior: "smooth" });
+      scrollToSection(id);
     }
   };
 
@@ -37,9 +38,9 @@ const Navbar = () => {
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        {/* ── Logo / Name — goes to home root ── */}
+        {/* ── Logo ── */}
         <Link
-          to="/" // 👈 was "/online-portfolio/" — basename handles the prefix
+          to="/"
           className="flex items-center gap-2"
           onClick={() => {
             setActive("");
@@ -62,7 +63,6 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => handleNavClick(nav.id, nav.title)}
             >
-              {/* 👈 use button instead of <a href="#"> so we control scroll */}
               <button>{nav.title}</button>
             </li>
           ))}

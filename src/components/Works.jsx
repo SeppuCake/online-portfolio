@@ -118,4 +118,5 @@ const Works = () => (
   </>
 );
 
-export default SectionWrapper(Works, "");
+// Bottom of Works.jsx
+export default SectionWrapper(Works, "projects");
