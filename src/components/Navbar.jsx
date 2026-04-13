@@ -1,80 +1,103 @@
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-import { styles } from '../styles';
-import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+import { styles } from "../styles";
+import { navLinks } from "../constants";
+import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState('');
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // ── Handle anchor scrolling ───────────────────────────────────────────────
+  // If we're already on home, just scroll to the section
+  // If we're on a project detail page, navigate home first then scroll
+  const handleNavClick = (id, title) => {
+    setActive(title);
+    setToggle(false);
+
+    if (location.pathname !== "/") {
+      // Navigate home, then scroll after page loads
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
+      // Already on home, just scroll
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`
-      }>
-        <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
-          <Link
-            to="/online-portfolio/"
-            smooth={true}
-            duration={500}
-            className='flex items-center gap-2'
-            onClick={() =>{
-              window.scrollTo(0, 0);
-            }}>
-              <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
-              <p className="text-white text-[18px] font-bold cursor-pointer flex">Hakeem&nbsp;Rahman</p>
-          </Link>
-          <ul className='list-none hidden sm:flex flex-row gap-10'>
-            {navLinks.map((Link) => (
-              <li
-                key={Link.id}
-                smooth={true}
-                duration={500}
-                className={`${
-                  active === Link.title
-                    ? "text-white"
-                    : "text-secondary"
-                } hover:text-white text-[18px] font-medium cursor-pointer`}
-                onClick={() => setActive(Link.title)}
-              >
-                <a href={`#${Link.id}`}>{Link.title}</a>
-              </li>
-            ))}
-          </ul>
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+    >
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+        {/* ── Logo / Name — goes to home root ── */}
+        <Link
+          to="/" // 👈 was "/online-portfolio/" — basename handles the prefix
+          className="flex items-center gap-2"
+          onClick={() => {
+            setActive("");
+            window.scrollTo(0, 0);
+          }}
+        >
+          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Hakeem&nbsp;Rahman
+          </p>
+        </Link>
 
-          <div className='sm:hidden flex flex-1 justify-end items-center'>
-            <img 
-            src={toggle ? close : menu} 
-            alt='menu' 
-            className='w-[28px] h-[28px] object-contain cursor-pointer'
-            onClick={() => setToggle(!toggle)}/>
+        {/* ── Desktop nav ── */}
+        <ul className="list-none hidden sm:flex flex-row gap-10">
+          {navLinks.map((nav) => (
+            <li
+              key={nav.id}
+              className={`${
+                active === nav.title ? "text-white" : "text-secondary"
+              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              onClick={() => handleNavClick(nav.id, nav.title)}
+            >
+              {/* 👈 use button instead of <a href="#"> so we control scroll */}
+              <button>{nav.title}</button>
+            </li>
+          ))}
+        </ul>
 
-            <div className={`${!toggle ? 'hidden' : 'flex' } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}>
-              <ul className='list-none justify-end items-start flex-col gap-4'>
-              {navLinks.map((Link) => (
+        {/* ── Mobile nav ── */}
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <img
+            src={toggle ? close : menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            onClick={() => setToggle(!toggle)}
+          />
+
+          <div
+            className={`${!toggle ? "hidden" : "flex"} p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+          >
+            <ul className="list-none justify-end items-start flex-col gap-4">
+              {navLinks.map((nav) => (
                 <li
-                  key={Link.id}
-                  smooth={true}
-                  duration={500}
+                  key={nav.id}
                   className={`${
-                    active === Link.title
-                      ? "text-white"
-                      : "text-secondary"
+                    active === nav.title ? "text-white" : "text-secondary"
                   } font-poppings font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(Link.title);
-                  }}
+                  onClick={() => handleNavClick(nav.id, nav.title)}
                 >
-                  <a href={`#${Link.id}`}>{Link.title}</a>
+                  <button>{nav.title}</button>
                 </li>
               ))}
-              </ul>
-            </div>
+            </ul>
           </div>
         </div>
+      </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
