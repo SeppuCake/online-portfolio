@@ -130,7 +130,7 @@ const projects = [
     longDescription:
       "The Central Task Monitor (CTM) is an internal web-based management information system (MIS) developed solely for Computer Forms Malaysia Berhad (CFM). Built as a solo project during my tenure as a Junior Programmer, CTM was designed to replace fragmented manual workflows by centralising service request tracking, task assignment, and departmental reporting into a single secure platform. The system supports multi-stage service request workflows - from submission through to resolution - with real-time status updates and role-specific dashboards for each department. Every feature was built with production reliability in mind, from the AJAX-powered live updates to the structured UAC system that controls what each role can see and do.",
     status: "Deployed (Internal)",
-    duration: "Ongoing (2025 – Present)",
+    duration: "Ongoing (2025 - Present)",
     team: "Solo Developer",
     tags: [
       { name: "PHP", color: "pink-text-gradient" },
@@ -297,12 +297,12 @@ const projects = [
     name: "e-Procurement System",
     slug: "e-procurement-system",
     description:
-      "A responsive web application and dashboard for procurement management, featuring statistics on orders and procurements, report generation, and full CRUD functionality with user access control (UAC) privileges.",
+      "A full-stack procurement management web application built during internship, featuring a multi-stage approval workflow from order submission through HOD approval to supplier fulfilment, with a real-time dashboard, report generation, and role-based access control.",
     longDescription:
-      "A full-stack procurement management web application built with Laravel and PHP. Features a responsive dashboard with order statistics, full CRUD operations, and role-based access control.",
-    status: "Completed",
-    duration: "N/A",
-    team: "Solo Developer",
+      "The e-Procurement System was built solo during my internship at Compurex Corporation Sdn Bhd as a commissioned internal product. Before this system existed, procurement was handled entirely through emails, phone calls, and paper forms — a fragmented process that made it nearly impossible for PICs working remotely or on client sites to review and approve staff requests in a timely manner. The system replaced this entirely with a structured, multi-stage digital workflow: staff submit procurement requests, HODs review and approve them, approved requests are listed for registered suppliers to view, and suppliers accept and fulfil the procurement — all tracked in one place. Built over 3-4 months as a self-taught intern with no AI assistance and no senior guidance, every feature was researched independently using Stack Overflow, official documentation, and developer forums. This project marks the turning point where my skills crossed from basic programming into full-stack web development. Notably, the entire MVC architecture was designed and built from scratch — not using Laravel's scaffolding, but inspired by its conventions — including a custom-written role-based access control system, input validation, and sanitisation layer, all implemented without third-party security libraries. Every architectural decision was researched, reasoned, and built independently.",
+    status: "Completed — Handed Over (v1.0)",
+    duration: "3-4 months",
+    team: "Solo Developer (Internship)",
     tags: [
       { name: "PHP", color: "pink-text-gradient" },
       { name: "Laravel", color: "orange-text-gradient" },
@@ -313,28 +313,98 @@ const projects = [
       { name: "HTML", color: "blue-text-gradient" },
     ],
     techStack: [
-      { label: "Framework", value: "Laravel (PHP)" },
-      { label: "Frontend", value: "Blade, Bootstrap, jQuery" },
+      {
+        label: "Framework",
+        value: "Custom Framework (Inspired by Laravel MVC Model)",
+      },
+      { label: "Frontend", value: "Blade Templates, Bootstrap, jQuery" },
       { label: "Database", value: "MySQL" },
+      { label: "Data Fetching", value: "AJAX (async live updates)" },
+      {
+        label: "Access Control",
+        value: "Custom-built RBAC (hand-written, no external library)",
+      },
+      {
+        label: "Architecture",
+        value: "Custom MVC Framework (self-built, Laravel-inspired)",
+      },
+      {
+        label: "Security",
+        value: "Self-implemented OWASP Top 10, input validation & sanitisation",
+      },
+      { label: "Reports", value: "PDF Generation" },
     ],
     features: [
       {
-        title: "Order & Procurement Dashboard",
-        desc: "Statistics and overview of all procurement activity.",
+        title: "Multi-Stage Procurement Workflow",
+        desc: "Full order lifecycle — staff submission → HOD approval → supplier procurement listing → supplier acceptance → fulfilment. Every stage is tracked with status updates.",
       },
       {
-        title: "Full CRUD Operations",
-        desc: "Manage orders, products, and users.",
+        title: "Remote-Accessible Approval",
+        desc: "Designed specifically so PICs working remotely or on client sites can review and approve procurement requests without being physically present.",
       },
       {
-        title: "UAC Privileges",
-        desc: "Role-based access for different staff levels.",
+        title: "Supplier Portal",
+        desc: "Registered suppliers have their own access to view open procurement listings and accept or decline requests directly within the system.",
       },
-      { title: "Report Generation", desc: "Export procurement summaries." },
+      {
+        title: "Real-Time Dashboard",
+        desc: "Visualised procurement statistics, order traffic, and activity summaries via an interactive dashboard for at-a-glance operational awareness.",
+      },
+      {
+        title: "Inventory & Product Management",
+        desc: "Full CRUD management of products and inventory with structured categorisation and stock-level visibility.",
+      },
+      {
+        title: "Budget & Cost Approval Workflows",
+        desc: "Cost-aware approval routing ensures procurement requests are reviewed against budget constraints before progressing to the supplier stage.",
+      },
+      {
+        title: "PDF Report Generation",
+        desc: "Exportable procurement summaries and order reports for management review, audit trails, and record keeping.",
+      },
+      {
+        title: "Role-Based Access Control",
+        desc: "Four distinct user roles — Admin, Manager, Staff, and Supplier — each with tightly scoped permissions controlling what they can view and action.",
+      },
+      {
+        title: "Self-Built Security Layer",
+        desc: "Rather than relying on framework-provided security tools, the entire access control system, input validation, and sanitisation layer was written from scratch — applying OWASP Top 10 principles with full understanding of each implementation decision.",
+      },
+      {
+        title: "Responsive UI",
+        desc: "Fully responsive interface ensuring usability across desktop and mobile devices — critical for remote PICs accessing the system from client sites.",
+      },
     ],
-    roles: [],
+    roles: [
+      {
+        label: "Admin",
+        desc: "Full system configuration, user management, and oversight of all procurement activity",
+      },
+      {
+        label: "Manager / HOD",
+        desc: "Review and approve or reject staff procurement requests before they reach suppliers",
+      },
+      {
+        label: "Staff",
+        desc: "Submit procurement requests, track approval status, and manage assigned orders",
+      },
+      {
+        label: "Supplier",
+        desc: "View open procurement listings and accept or decline requests for fulfilment",
+      },
+    ],
     image: eproc_dashboard,
-    gallery: [eproc_login],
+    gallery: [
+      eproc_login,
+      eproc_orderlist,
+      eproc_uac,
+      eproc_report,
+      eproc_crud,
+      eproc_newuser,
+      eproc_newprod,
+      eproc_proddet,
+    ],
     source_code_link: "https://github.com/SeppuCake",
   },
   {
