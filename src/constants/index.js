@@ -31,7 +31,6 @@ import {
   cfm_ctm_dashboard,
   cfm_ctm_sr,
   cfm_ctm_srform,
-  konbini,
   personalproj,
   calradiaRPG,
   danmachiRPG,
@@ -56,6 +55,14 @@ import {
   aniso_eqPM2,
   aniso_eqPM3,
   aniso_eqPM4,
+  konbini,
+  konbini_homepage,
+  konbini_productpage,
+  konbini_productreg,
+  konbini_nfcread,
+  konbini_concept,
+  konbini_hw1,
+  konbini_hw2,
 } from "../assets";
 
 export const navLinks = [
@@ -570,11 +577,13 @@ const projects = [
     image: konbini,
 
     gallery: [
-      "homepage.png",
-      "productpage.png",
-      "productreg.png",
-      "nfcread.png",
-      "illustratedconcept.png",
+      konbini_homepage,
+      konbini_productpage,
+      konbini_productreg,
+      konbini_nfcread,
+      konbini_hw1,
+      konbini_hw2,
+      konbini_concept,
     ],
 
     source_code_link: "https://github.com/SeppuCake",

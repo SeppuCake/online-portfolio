@@ -91,6 +91,14 @@ import aniso_pm2 from "./anisotropic/peronamalik2.png";
 import aniso_eqPM2 from "./anisotropic/equationPM2.jpg";
 import aniso_eqPM3 from "./anisotropic/equationPM3.jpg";
 import aniso_eqPM4 from "./anisotropic/equationPM4.jpg";
+//Konbini Imports
+import konbini_homepage from "./konbini/homepage.png";
+import konbini_productpage from "./konbini/productpage.png";
+import konbini_productreg from "./konbini/productreg.png";
+import konbini_nfcread from "./konbini/nfcread.png";
+import konbini_concept from "./konbini/illustratedconcept.png";
+import konbini_hw1 from "./konbini/nfcreaderhardware1.jpg";
+import konbini_hw2 from "./konbini/nfcreaderhardware2.jpg";
 
 export {
   logo,
@@ -140,7 +148,6 @@ export {
   eproc_msgmod,
   aniso,
   aniso_eqPM1,
-  konbini,
   personalproj,
   danmachiRPG,
   calradiaRPG,
@@ -179,4 +186,12 @@ export {
   aniso_eqPM2,
   aniso_eqPM3,
   aniso_eqPM4,
+  konbini,
+  konbini_homepage,
+  konbini_productpage,
+  konbini_productreg,
+  konbini_nfcread,
+  konbini_concept,
+  konbini_hw1,
+  konbini_hw2,
 };
