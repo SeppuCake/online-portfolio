@@ -566,12 +566,13 @@ const projects = [
     ],
 
     roles: [
-      "Designed and developed the full web application (frontend + backend)",
-      "Integrated Arduino NFC hardware with PHP via serial communication",
-      "Implemented AJAX-based real-time data updates using jQuery",
-      "Architected the customer self-checkout flow using QR session tokens",
-      "Mentored and guided a non-technical client to build and present the system",
-      "Conducted testing, debugging, and final project delivery within 3 months",
+      { label: "Admin", desc: "Full system control and configuration" },
+      { label: "Manager", desc: "Monitor stock and reports" },
+      { label: "Store Staff", desc: "Register products and manage inventory" },
+      {
+        label: "Customer",
+        desc: "Use QR-based cart session and self-checkout",
+      },
     ],
 
     image: konbini,
