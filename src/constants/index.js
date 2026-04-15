@@ -502,37 +502,81 @@ const projects = [
     name: "Konbini Inventory",
     slug: "konbini-inventory",
     description:
-      "An inventory management system for the retail industry using Near-Field Communications (NFC) technology to track stock and sales performance efficiently.",
+      "A smart retail inventory and self-checkout system using NFC and QR technology to automate stock tracking and enhance customer checkout experience.",
+
     longDescription:
-      "Konbini Inventory is a retail inventory management system powered by NFC technology. More details coming soon.",
+      "The Konbini Inventory System is a smart retail solution inspired by cashier-less store concepts like Amazon Go. It was designed to replace traditional barcode scanning and manual stock counting with a real-time, automated inventory and checkout system. The project integrates Arduino-based NFC hardware with a PHP/MySQL web application, allowing products to be tracked seamlessly from shelf to cart. Customers interact with the system by scanning a QR code on the shopping cart, enabling a guest session without registration, while NFC readers detect items placed into the cart and automatically update a virtual cart in the web app. The system provides a complete pipeline from product registration to real-time inventory tracking and digital self-checkout.",
+
     status: "Completed",
     duration: "3 month(s)",
     team: "Duo Developer (Client-Commissioned)",
+
     tags: [
       { name: "HTML", color: "blue-text-gradient" },
       { name: "CSS", color: "pink-text-gradient" },
-      { name: "JavaScript", color: "blue-text-gradient" },
+      { name: "JavaScript", color: "yellow-text-gradient" },
+      { name: "PHP", color: "green-text-gradient" },
       { name: "MySQL", color: "green-text-gradient" },
       { name: "Arduino", color: "orange-text-gradient" },
+      { name: "AJAX", color: "blue-text-gradient" },
     ],
+
     techStack: [
-      { label: "Frontend", value: "HTML, CSS, JavaScript" },
+      {
+        label: "Frontend",
+        value: "HTML5, CSS, Bootstrap, JavaScript (jQuery, AJAX)",
+      },
+      { label: "Backend", value: "PHP (XAMPP)" },
       { label: "Database", value: "MySQL" },
-      { label: "Hardware", value: "Arduino + NFC Module" },
+      { label: "Hardware", value: "Arduino + NFC Readers" },
     ],
+
     features: [
       {
-        title: "NFC Stock Tracking",
-        desc: "Scan items via NFC to update inventory in real time.",
+        title: "Real-Time Inventory Tracking",
+        desc: "Shelf-mounted NFC readers detect product removal and automatically update stock levels without manual counting.",
       },
       {
-        title: "Sales Performance",
-        desc: "Track product sales and stock levels.",
+        title: "Smart Cart System",
+        desc: "NFC-enabled carts detect items placed inside and sync them instantly to a virtual cart in the web application.",
+      },
+      {
+        title: "QR-Based Guest Checkout",
+        desc: "Customers scan a QR code to start a session without registration, enabling a frictionless shopping experience.",
+      },
+      {
+        title: "Self-Checkout Flow",
+        desc: "Users review items, select options (e.g. bagging), and complete payment directly within the web app.",
+      },
+      {
+        title: "NFC Product Registration",
+        desc: "Staff register NFC tags to products, enabling full traceability from shelf to checkout.",
+      },
+      {
+        title: "Multi-Role Access Control",
+        desc: "Supports Admin, Manager, Staff, and Customer roles with different permissions and system access.",
       },
     ],
-    roles: [],
+
+    roles: [
+      "Designed and developed the full web application (frontend + backend)",
+      "Integrated Arduino NFC hardware with PHP via serial communication",
+      "Implemented AJAX-based real-time data updates using jQuery",
+      "Architected the customer self-checkout flow using QR session tokens",
+      "Mentored and guided a non-technical client to build and present the system",
+      "Conducted testing, debugging, and final project delivery within 3 months",
+    ],
+
     image: konbini,
-    gallery: [],
+
+    gallery: [
+      "homepage.png",
+      "productpage.png",
+      "productreg.png",
+      "nfcread.png",
+      "illustratedconcept.png",
+    ],
+
     source_code_link: "https://github.com/SeppuCake",
   },
   {
